@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Sign-in</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-</head>
-<body>
+{% extends 'base.html.twig' %}
+
+{% block title %}Sign-in{% endblock %}
+
+{% block body %}
 <div id="wrapper">
     <div id="header">
         <div id="logo">
@@ -73,6 +69,4 @@
         <br class="clearfix" />
     </div>
 </div>
-
-</body>
-</html>
+{% endblock %}
