@@ -1,0 +1,26 @@
+app.username: 'Username:'
+app.password: 'Password:'
+app.login: login
+game.failed: 'Oops, you''re hanged... The word to guess was <strong>%word%</strong>.'
+game.remaining_attempts: 'You only have 1 remaining attempt.|You still have %count% remaining attempts.'
+game.reset: 'Reset the game'
+game.try_letter: 'Try a letter'
+game.try_word: 'Try a word'
+game.word: 'Word:'
+game.guess: 'Let me guess...'
+game.won: 'You found the word <strong>%word%</strong> and won this game.'
+menu.game: Game
+menu.register: Register
+menu.login: Login
+menu.contact: Contact
+title.hangman: hangman
+title.game_failed: 'You''re hanged!'
+title.game_won: 'You won!'
+title.home: Sign-in
+sidebar.last_games': 'Last Games'
+sidebar.last_players': 'Last players'
+subtitle.game_failed: 'Game Over!'
+subtitle.game_index: 'Guess the mysterious word'
+subtitle.game_won: 'Congratulations!'
+subtitle.home: 'Access your player account'
+

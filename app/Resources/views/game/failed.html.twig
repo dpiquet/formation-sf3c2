@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hangman Game - You're hanged!{% endblock %}
+{% block title %}| {{ 'title.game_failed'|trans }}{% endblock %}
 
 {% block content %}
-    <h2>Game Over!</h2>
+    <h2>{{ 'subtitle.game_failed'|trans }}</h2>
 
     <p>
-        Oops, you're hanged... The word to guess was <strong>xilophon</strong>.
+        {% trans with { '%word%': 'xilophon' } %}
+            game.failed
+        {% endtrans %}
     </p>
 {% endblock %}

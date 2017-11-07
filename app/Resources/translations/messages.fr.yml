@@ -1,0 +1,25 @@
+app.username: 'Nom d''utilisateur :'
+app.password: 'Mot de passe :'
+app.login: Se connecter
+game.failed: 'Oups, vous êtes pendu... Le mot à trouver était <strong>%word%</strong>.'
+game.remaining_attempts: 'Il ne vous reste qu''un coup.|Il vous reste %count% coups restants.'
+game.reset: Relancer la partie
+game.try_letter: Essayer une lettre
+game.try_word: Essayer un mot
+game.word: 'Mot :'
+game.guess: 'J''essaye...'
+game.won: 'Vous avez trouvé le mot <strong>%word%</strong> et gagné cette partie.'
+menu.game: Partie
+menu.register: S'enregistrer
+menu.login: Connexion
+menu.contact: Contact
+title.hangman: Le Pendu
+title.game_failed: Vous êtes pendu !
+title.game_won: Vous avez gagné !
+title.home: Se connecter
+sidebar.last_games: Dernières parties
+sidebar.last_players: Derniers joueurs
+subtitle.game_failed: Partie terminée
+subtitle.game_index: Devinez le mot mysterieux
+subtitle.game_won: 'Félicitations !'
+subtitle.home: Accéder à votre compte

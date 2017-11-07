@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Hangman{% endblock %}</title>
+        <title>{{ 'title.hangman'|trans }}{% block title %}{% endblock %}</title>
         {% block stylesheets %}
             <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" />
         {% endblock %}

@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hangman Game - You won!{% endblock %}
+{% block title %}| {{ 'title.game_won'|trans }}{% endblock %}
 
 {% block content %}
-    <h2>Congratulations!</h2>
+    <h2>{{ 'subtitle.game_won'|trans }}</h2>
 
     <p>
-        You found the word <strong>software</strong> and won this game.
+        {% trans with { '%word%': 'software'} %}
+            game.won
+        {% endtrans %}
     </p>
 {% endblock %}
