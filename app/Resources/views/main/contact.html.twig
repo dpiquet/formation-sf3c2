@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} | {{ 'title.contact'|trans }}{% endblock %}
+
+{% block content %}
+    <h2>{{ 'subtitle.contact'|trans }}</h2>
+
+    {{ form(contact_form, { attr: { novalidate: '' } }) }}
+{% endblock %}
