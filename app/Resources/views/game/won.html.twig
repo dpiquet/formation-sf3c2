@@ -6,7 +6,7 @@
     <h2>{{ 'subtitle.game_won'|trans }}</h2>
 
     <p>
-        {% trans with { '%word%': 'software'} %}
+        {% trans with { '%word%': game.word } %}
             game.won
         {% endtrans %}
     </p>

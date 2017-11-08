@@ -6,7 +6,7 @@
     <h2>{{ 'subtitle.game_failed'|trans }}</h2>
 
     <p>
-        {% trans with { '%word%': 'xilophon' } %}
+        {% trans with { '%word%': game.word } %}
             game.failed
         {% endtrans %}
     </p>
