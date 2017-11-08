@@ -4,13 +4,13 @@
     <h2>{{ 'subtitle.game_index'|trans }}</h2>
 
     <p class="attempts">
-        {{ 'game.remaining_attempts'|transchoice(11) }}
+        {{ 'game.remaining_attempts'|transchoice(game.remainingAttempts) }}
     </p>
 
     <ul class="word_letters">
-        {% for l in 1..8 %}
+        {% for letter in game.wordLetters %}
             <li class="letter">
-                ?
+                {{ game.letterFound(letter) ? letter : '?' }}
             </li>
         {% endfor %}
     </ul>
