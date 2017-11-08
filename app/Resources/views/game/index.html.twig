@@ -18,7 +18,7 @@
     <br class="clearfix" />
 
     <p class="attempts">
-        <a href="/game/reset">{{ 'game.reset'|trans }}</a>
+        <a href="{{ path('game_reset') }}">{{ 'game.reset'|trans }}</a>
     </p>
 
     <br class="clearfix" />
@@ -28,7 +28,7 @@
     <ul>
         {% for l in 'A'..'Z' %}
             <li class="letter">
-                <a href="/game/letter/{{ l }}">
+                <a href="{{ path('game_play_letter', { letter: l }) }}">
                     {{ l }}
                 </a>
             </li>
@@ -37,7 +37,7 @@
 
     <h2>{{ 'game.try_word'|trans }}</h2>
 
-    <form action="/game/word" method="post">
+    <form action="{{ path('game_play_word') }}" method="post">
         <p>
             <label for="word">{{ 'game.word'|trans }}</label>
             <input type="text" id="word" name="word"/>
