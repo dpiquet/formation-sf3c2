@@ -17,6 +17,7 @@ game.won: 'Vous avez trouvé le mot <strong>%word%</strong> et gagné cette part
 menu.game: Partie
 menu.register: S'enregistrer
 menu.login: Connexion
+menu.logout: Déconnexion
 menu.contact: Contact
 title.hangman: Le Pendu
 title.game_failed: Vous êtes pendu !

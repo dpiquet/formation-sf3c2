@@ -6,12 +6,14 @@
     <h2>{{ 'subtitle.home'|trans }}</h2>
 
 
-    <form action="/login_check" method="post">
+    <form method="post">
         <label for="username">{{ 'app.username'|trans }}</label>
-        <input type="text" id="username" name="my_login" value="" />
+        <input type="text" id="username" name="player_username" value="" />
 
         <label for="password">{{ 'app.password'|trans }}</label>
-        <input type="password" id="password" name="my_secret" />
+        <input type="password" id="password" name="player_password" />
+
+        <input type="hidden" name="player_csrf_token" value="{{ csrf_token('authenticate_player') }}">
 
         <button type="submit">{{ 'app.login'|trans }}</button>
     </form>

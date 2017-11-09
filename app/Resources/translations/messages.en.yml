@@ -17,6 +17,7 @@ game.won: 'You found the word <strong>%word%</strong> and won this game.'
 menu.game: Game
 menu.register: Register
 menu.login: Login
+menu.logout: Logout
 menu.contact: Contact
 title.hangman: hangman
 title.game_failed: 'You''re hanged!'

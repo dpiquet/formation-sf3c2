@@ -1,11 +1,17 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: bcrypt
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
+        users_in_memory:
+            memory:
+                users:
+                    toto:
+                        password: '$2y$13$ajgbgeloy8SuyXQrPZ33s.rpSgUXAgjwSwxYxPz9UVmLkaTjG6Lwm'
+                        roles: 'ROLE_USER'
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -15,6 +21,18 @@ security:
 
         main:
             anonymous: ~
+            form_login:
+                login_path: homepage
+                check_path: homepage
+                default_target_path: game_index
+                username_parameter: player_username
+                password_parameter: player_password
+                csrf_parameter: player_csrf_token
+                csrf_token_id: authenticate_player
+            logout:
+                path: logout
+                target: homepage
+
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate

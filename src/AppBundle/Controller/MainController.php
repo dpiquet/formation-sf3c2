@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use AppBundle\Contact\ContactMailer;
 use AppBundle\Contact\Message;
 use AppBundle\Form\ContactType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -13,6 +14,7 @@ class MainController extends Controller
 {
     /**
      * @Route("/", name="homepage")
+     * @Method("GET|POST")
      */
     public function homeAction()
     {
@@ -21,6 +23,7 @@ class MainController extends Controller
 
     /**
      * @Route("/contact", name="contact")
+     * @Method("GET|POST")
      */
     public function contactAction(Request $request)
     {

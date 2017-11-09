@@ -13,7 +13,11 @@
                 <a href="/signup">{{ 'menu.register'|trans }}</a>
             </li>
             <li>
-                <a href="/signin">{{ 'menu.login'|trans }}</a>
+                {% if app.user %}
+                    <a href="{{ path('logout') }}">{{ 'menu.logout'|trans }}</a>
+                {% else %}
+                    <a href="{{ path('homepage') }}">{{ 'menu.login'|trans }}</a>
+                {% endif %}
             </li>
             <li>
                 <a href="{{ path('contact') }}">{{ 'menu.contact'|trans }}</a>
