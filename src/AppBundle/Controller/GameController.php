@@ -5,13 +5,18 @@ namespace AppBundle\Controller;
 use AppBundle\Game\GameRunner;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * @Route("/game")
+ * @Security("has_role('ROLE_USER')")
+ */
 class GameController extends Controller
 {
     /**
-     * @Route("/game", name="game_index")
+     * @Route(name="game_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -22,7 +27,7 @@ class GameController extends Controller
     }
 
     /**
-     * @Route("/game/letter/{letter}", name="game_play_letter")
+     * @Route("/letter/{letter}", name="game_play_letter")
      * @Method("GET")
      */
     public function playLetterAction($letter)
@@ -33,7 +38,7 @@ class GameController extends Controller
     }
 
     /**
-     * @Route("/game/word", name="game_play_word", condition="request.request.has('word')")
+     * @Route("/word", name="game_play_word", condition="request.request.has('word')")
      * @Method("POST")
      */
     public function playWordAction(Request $request)
@@ -48,7 +53,7 @@ class GameController extends Controller
     }
 
     /**
-     * @Route("/game/won", name="game_won")
+     * @Route("/won", name="game_won")
      * @Method("GET")
      */
     public function wonAction()
@@ -59,7 +64,7 @@ class GameController extends Controller
     }
 
     /**
-     * @Route("/game/failed", name="game_failed")
+     * @Route("/failed", name="game_failed")
      * @Method("GET")
      */
     public function failedAction()
@@ -70,7 +75,7 @@ class GameController extends Controller
     }
 
     /**
-     * @Route("/game/reset", name="game_reset")
+     * @Route("/reset", name="game_reset")
      * @Method("GET")
      */
     public function resetAction()

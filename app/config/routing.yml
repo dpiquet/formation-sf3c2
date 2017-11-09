@@ -7,6 +7,13 @@ app:
     requirements:
         _locale: '[a-z]{2}'
 
+root:
+    path: /
+    methods: GET
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: homepage
+
 logout:
     path: /logout
     methods: GET
