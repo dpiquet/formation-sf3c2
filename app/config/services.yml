@@ -17,6 +17,11 @@ services:
         # but if a service is unused, it's removed anyway
         exclude: '../../src/AppBundle/{Entity,Repository,Tests}'
 
+    AppBundle\Contact\ContactMailer:
+        public: true
+        arguments:
+            $sendTo: '%app.contact.send_to%'
+
     AppBundle\Game\WordList:
         calls:
             - method: addLoader

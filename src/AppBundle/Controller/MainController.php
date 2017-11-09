@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Contact\ContactMailer;
 use AppBundle\Contact\Message;
 use AppBundle\Form\ContactType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -23,20 +24,10 @@ class MainController extends Controller
      */
     public function contactAction(Request $request)
     {
-        $form = $this->createForm(ContactType::class)
-            ->handleRequest($request)
-        ;
+        $form = $this->createForm(ContactType::class)->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            /** @var Message $message */
-            $message = $form->getData();
-
-            $mail = new \Swift_Message($message->getSubject(), $message->getContent());
-            $mail->setFrom($message->getEmail(), $message->getName());
-            $mail->setTo('webmaster@hangman.com');
-
-            $this->get('mailer')->send($mail);
-
+            $this->get(ContactMailer::class)->sendMessage($form->getData());
             $this->addFlash('success', 'Votre message envoyé.');
 
             return $this->redirectToRoute('contact');
